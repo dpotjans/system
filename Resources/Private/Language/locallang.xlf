@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2019-12-16T14:00:10Z" product-name="system">
+        <header/>
+        <body>
+            <trans-unit id="tx_system.lost_money">
+                <source><![CDATA[CFDs sind komplexe Instrumente und gehen wegen der Hebelwirkung mit dem hohen Risiko einher, schnell Geld zu verlieren. <strong>%s der Kleinanlegerkonten verlieren Geld beim CFD-Handel mit diesem Anbieter.</strong> Sie sollten überlegen, ob Sie verstehen, wie CFD funktionieren, und ob Sie es sich leisten können, das hohe Risiko einzugehen, Ihr Geld zu verlieren.]]></source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

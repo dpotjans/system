@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-12-16T14:00:10Z" product-name="system">
+        <header/>
+        <body>
+            <trans-unit id="tx_system.lost_money">
+                <source><![CDATA[CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <strong>%s of retail investor accounts lose money when trading CFDs with this provider.</strong> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.]]></source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

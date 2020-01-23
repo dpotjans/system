@@ -1,0 +1,13 @@
+{namespace fx=FXFlat\System\ViewHelpers}
+
+<f:variable name="percentage">
+    <fx:percentageOfLostMoney/>
+</f:variable>
+
+<aside id="riskInformation">
+    <div class="inner">
+        <f:format.raw>
+            <f:translate key="tx_system.lost_money" extensionName="system" arguments="{0 : '{percentage}%'}"/>
+        </f:format.raw>
+    </div>
+</aside>

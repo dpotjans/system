@@ -1,0 +1,24 @@
+<f:if condition="{nav}">
+    <nav id="footerNav">
+        <ul class="navbar-nav lvl-1">
+            <div class="row">
+                <f:for each="{nav}" as="menuItem">
+                    <div class="col col-lg-2">
+                        <li class="nav-item{f:if(condition:menuItem.active, then: ' active')}{f:if(condition:menuItem.current, then: ' current')}">
+                            <f:link.page pageUid="{menuItem.data.uid}">{menuItem.title}</f:link.page>
+                            <f:if condition="{menuItem.children}">
+                                <ul class="lvl-2">
+                                    <f:for each="{menuItem.children}" as="sub-1">
+                                        <li class="nav-item{f:if(condition:sub-1.active, then: ' active')}{f:if(condition:sub-1.current, then: ' current')}">
+                                            <f:link.page pageUid="{sub-1.data.uid}">{sub-1.title}</f:link.page>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </f:if>
+                        </li>
+                    </div>
+                </f:for>
+            </div>
+        </ul>
+    </nav>
+</f:if>

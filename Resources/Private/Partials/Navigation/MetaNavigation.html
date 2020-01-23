@@ -1,0 +1,11 @@
+<f:if condition="{nav}">
+    <nav id="metaNav">
+        <ul>
+            <f:for each="{nav}" as="menuItem">
+                <li class="nav-item{f:if(condition:menuItem.active, then: ' active')}{f:if(condition:menuItem.current, then: ' current')}">
+                    <f:link.page pageUid="{menuItem.data.uid}">{menuItem.title}</f:link.page>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</f:if>

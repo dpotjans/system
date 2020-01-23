@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 10px !important;
+}
+
+#pageWrap {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+header#stage .inner,
+main#content .inner,
+footer#sitemap .inner,
+aside#riskInformation .inner {
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+nav#mainNav ul.navbar-nav.lvl-1 {
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+nav#mainNav ul.navbar-nav.lvl-1 li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+nav#mainNav ul.navbar-nav.lvl-1 li a {
+  color: white;
+}
+nav#mainNav ul.navbar-nav.lvl-1 li:hover ul {
+  display: block;
+}
+nav#mainNav ul.navbar-nav.lvl-1.mainNav-lvl-2 {
+  display: none;
+  position: absolute;
+  background: #82bbd7;
+}
+
+nav#metaNav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+header#stage {
+  background: #042f61;
+}
+
+footer#sitemap {
+  background: #d0d0d0;
+}
+
+aside#riskInformation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 3rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-top: 2px solid #042f61;
+  z-index: 999999999;
+}
+
+/*# sourceMappingURL=fxflat.css.map */

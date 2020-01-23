@@ -1,0 +1,26 @@
+<f:layout name="Main" />
+<f:section name="content">
+    <header id="stage">
+        <f:render partial="Navigation/MainNavigation" arguments="{nav: mainNav}"/>
+        <f:render partial="Navigation/LanguageNavigation" arguments="{languages: langNav}"/>
+        <div id="slider">
+            <div class="inner">
+                <f:format.raw>{contentHeader}</f:format.raw>
+            </div>
+        </div>
+    </header>
+    <main id="content">
+        <div class="inner">
+            <f:format.raw>{contentMain}</f:format.raw>
+        </div>
+    </main>
+    <footer id="sitemap">
+        <div class="inner">
+            <f:format.raw>{contentFooter}</f:format.raw>
+            <f:render partial="Navigation/FooterNavigation" arguments="{nav: footerNav}"/>
+            <f:render partial="Navigation/MetaNavigation" arguments="{nav: metaNav}"/>
+        </div>
+    </footer>
+    <f:render partial="RiskInformation"/>
+</f:section>
+

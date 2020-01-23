@@ -1,0 +1,94 @@
+page = PAGE
+page {
+	typeNum = 0
+   	config {
+     	contentObjectExceptionHandler = 0
+   	}
+
+  	bodyTag >
+	bodyTagCObject = TEXT
+	bodyTagCObject.dataWrap = <body id="page-uid-{field:uid}">
+
+	10 = FLUIDTEMPLATE
+	10 {
+        partialRootPath = EXT:system/Resources/Private/Partials/
+        layoutRootPath = EXT:system/Resources/Private/Layouts/
+
+        file.stdWrap.cObject = CASE
+        file.stdWrap.cObject {
+            key.data = levelfield:-1, backend_layout, slide
+            key.override.field = backend_layout
+            default = TEXT
+            default {
+                value = EXT:system/Resources/Private/Templates/Maintemplate.html
+            }
+        }
+        variables {
+            contentHeader < styles.content.get
+            contentHeader {
+                select.where = colPos = 1
+            }
+            contentMain < styles.content.get
+            contentMain {
+                select.where = colPos = 0
+            }
+          	contentFooter < styles.content.get
+          	contentFooter {
+            	select.where = colPos = 2
+          	}
+        }
+
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                special = directory
+                special.value = 4786
+                levels = 99
+                includeSpacer = 1
+                expandAll = 1
+                as = mainNav
+            }
+
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = directory
+                special.value = 2183
+                levels = 99
+                includeSpacer = 1
+                expandAll = 1
+                as = footerNav
+            }
+
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = directory
+                special.value = 4787
+                levels = 1
+                includeSpacer = 0
+                expandAll = 0
+                as = metaNav
+            }
+
+            90 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            90 {
+               languages = auto
+               as = langNav
+            }
+        }
+    }
+
+    includeCSS {
+        fxflat = EXT:system/Resources/Public/Css/fxflat.css
+        bootstrap = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+        bootstrap.external = 1
+    }
+
+    includeJSFooter {
+        jquery = https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+        jquery.external = 1
+        jqueryUI = https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js
+        jqueryUI.external = 1
+        bootstrap = https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
+        bootstrap.external = 1
+    }
+}
